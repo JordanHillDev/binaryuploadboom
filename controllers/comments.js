@@ -7,7 +7,7 @@ module.exports = {
         const userId = req.user._id;
         try {
             await Comment.create({
-                comment: req.body.comment,
+                comment: comment,
                 user: userId,
                 post: postId,
             });
